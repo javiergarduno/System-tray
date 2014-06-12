@@ -19,7 +19,7 @@ public class HideToSystemTray extends JFrame{
 	SystemTray tray;
 
 	HideToSystemTray(){
-		super("SystemTray test");
+		super("Javier Garduño - Copia de fuentes ");
 
 		System.out.println("creating instance");
 		
@@ -35,7 +35,7 @@ public class HideToSystemTray extends JFrame{
 			tray = SystemTray.getSystemTray();
 			
 
-			Image image = Toolkit.getDefaultToolkit().getImage("pmx.png");
+			Image image = Toolkit.getDefaultToolkit().getImage("pemex_icon.png");
 			
 
 			ActionListener exitListener = new ActionListener() {
@@ -47,11 +47,11 @@ public class HideToSystemTray extends JFrame{
 
 			PopupMenu popup = new PopupMenu();
 			
-			MenuItem defaultItem = new MenuItem("Exit");
+			MenuItem defaultItem = new MenuItem("Cerrar");
 			defaultItem.addActionListener(exitListener);
 			popup.add(defaultItem);
 
-			defaultItem = new MenuItem("Open");
+			defaultItem = new MenuItem("Abrir");
 			defaultItem.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					setVisible(true);
@@ -61,7 +61,7 @@ public class HideToSystemTray extends JFrame{
 			popup.add(defaultItem);
 			
 			
-			trayIcon = new TrayIcon(image, "SystemTray Demo", popup);
+			trayIcon = new TrayIcon(image, "Copia de Fuentes", popup);
 			trayIcon.setImageAutoSize(true);
 			
 			
@@ -103,16 +103,16 @@ public class HideToSystemTray extends JFrame{
 		});
 		
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage("pmx.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("pemex_icon.png"));
 
 		setVisible(true);
-		setSize(300, 200);
+		setSize(600, 600);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
-	
+	/*
 	public static void main(String[] args){
 		new HideToSystemTray();
 	}
-	
+	*/
 }
